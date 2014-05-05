@@ -21,6 +21,7 @@ writeLines("Getting adjacency matrix...")
 my_network <- getNetwork(fb_oauth, format="adj.matrix")
 
 # Remove singletons for aesthetic purposes
+# (as implemented by http://blog.revolutionanalytics.com/2013/11/how-to-analyze-you-facebook-friends-network-with-r.html)
 
 singletons <- rowSums(my_network) == 0
 
